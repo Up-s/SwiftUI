@@ -18,6 +18,10 @@
 		BD35443B267C7F930065E2D1 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35443A267C7F930065E2D1 /* MemoStore.swift */; };
 		BD35443E267C83B00065E2D1 /* DateFormatter+Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35443D267C83B00065E2D1 /* DateFormatter+Memo.swift */; };
 		BD354441267C86290065E2D1 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD354440267C86290065E2D1 /* MemoCell.swift */; };
+		BD53D24B2680588A002D3BAB /* ComposeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD53D24A2680588A002D3BAB /* ComposeScene.swift */; };
+		BDD1B23D268074F600C60991 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1B23C268074F600C60991 /* TextView.swift */; };
+		BDD1B2402680773400C60991 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1B23F2680773400C60991 /* KeyboardObserver.swift */; };
+		BDD1B24226808EDC00C60991 /* DetailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1B24126808EDC00C60991 /* DetailScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		BD35443A267C7F930065E2D1 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		BD35443D267C83B00065E2D1 /* DateFormatter+Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Memo.swift"; sourceTree = "<group>"; };
 		BD354440267C86290065E2D1 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		BD53D24A2680588A002D3BAB /* ComposeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeScene.swift; sourceTree = "<group>"; };
+		BDD1B23C268074F600C60991 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		BDD1B23F2680773400C60991 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		BDD1B24126808EDC00C60991 /* DetailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		BD002544267C75290011ECEA /* SwiftUIMemo */ = {
 			isa = PBXGroup;
 			children = (
+				BDD1B23E2680771B00C60991 /* Shared */,
 				BD354442267C87400065E2D1 /* Scene */,
 				BD35443C267C83870065E2D1 /* Extension */,
 				BD354437267C7D740065E2D1 /* Model */,
@@ -109,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				BD354440267C86290065E2D1 /* MemoCell.swift */,
+				BDD1B23C268074F600C60991 /* TextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,8 +128,18 @@
 			children = (
 				BD35443F267C860B0065E2D1 /* View */,
 				BD002549267C75290011ECEA /* MemoListScene.swift */,
+				BD53D24A2680588A002D3BAB /* ComposeScene.swift */,
+				BDD1B24126808EDC00C60991 /* DetailScene.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		BDD1B23E2680771B00C60991 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1B23F2680773400C60991 /* KeyboardObserver.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,12 +214,16 @@
 			files = (
 				BD002546267C75290011ECEA /* AppDelegate.swift in Sources */,
 				BD35443B267C7F930065E2D1 /* MemoStore.swift in Sources */,
+				BDD1B2402680773400C60991 /* KeyboardObserver.swift in Sources */,
 				BD00254D267C75290011ECEA /* SwiftUIMemo.xcdatamodeld in Sources */,
 				BD35443E267C83B00065E2D1 /* DateFormatter+Memo.swift in Sources */,
+				BDD1B24226808EDC00C60991 /* DetailScene.swift in Sources */,
 				BD002548267C75290011ECEA /* SceneDelegate.swift in Sources */,
 				BD00254A267C75290011ECEA /* MemoListScene.swift in Sources */,
 				BD354439267C7D960065E2D1 /* Memo.swift in Sources */,
 				BD354441267C86290065E2D1 /* MemoCell.swift in Sources */,
+				BD53D24B2680588A002D3BAB /* ComposeScene.swift in Sources */,
+				BDD1B23D268074F600C60991 /* TextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

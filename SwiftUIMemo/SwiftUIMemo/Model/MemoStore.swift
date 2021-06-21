@@ -21,8 +21,8 @@ class MemoStore: ObservableObject {
   
   // CRUD
   
-  func insert(name: String) {
-    let newMemo = Memo(content: name)
+  func insert(memo: String) {
+    let newMemo = Memo(content: memo)
     self.list.insert(newMemo, at: 0)
   }
   
@@ -32,7 +32,9 @@ class MemoStore: ObservableObject {
   }
   
   func delete(memo: Memo) {
-    self.list.removeAll() { $0 == memo }
+    DispatchQueue.main.async {
+      self.list.removeAll() { $0 == memo }
+    }
   }
   
   func delete(set: IndexSet) {
