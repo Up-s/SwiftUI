@@ -14,6 +14,8 @@
 		BD00254F267C752A0011ECEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD00254E267C752A0011ECEA /* Assets.xcassets */; };
 		BD002552267C752A0011ECEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD002551267C752A0011ECEA /* Preview Assets.xcassets */; };
 		BD002555267C752A0011ECEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD002553267C752A0011ECEA /* LaunchScreen.storyboard */; };
+		BD0261F9268183A400C755D9 /* MemoEntity+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0261F8268183A400C755D9 /* MemoEntity+Identifiable.swift */; };
+		BD0261FB268183F100C755D9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0261FA268183F100C755D9 /* CoreDataManager.swift */; };
 		BD354439267C7D960065E2D1 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD354438267C7D960065E2D1 /* Memo.swift */; };
 		BD35443B267C7F930065E2D1 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35443A267C7F930065E2D1 /* MemoStore.swift */; };
 		BD35443E267C83B00065E2D1 /* DateFormatter+Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35443D267C83B00065E2D1 /* DateFormatter+Memo.swift */; };
@@ -34,6 +36,8 @@
 		BD002551267C752A0011ECEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD002554267C752A0011ECEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD002556267C752A0011ECEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0261F8268183A400C755D9 /* MemoEntity+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoEntity+Identifiable.swift"; sourceTree = "<group>"; };
+		BD0261FA268183F100C755D9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD354438267C7D960065E2D1 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		BD35443A267C7F930065E2D1 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		BD35443D267C83B00065E2D1 /* DateFormatter+Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Memo.swift"; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		BD002544267C75290011ECEA /* SwiftUIMemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD0261F7268182C600C755D9 /* DB */,
 				BDD1B23E2680771B00C60991 /* Shared */,
 				BD354442267C87400065E2D1 /* Scene */,
 				BD35443C267C83870065E2D1 /* Extension */,
@@ -83,7 +88,6 @@
 				BD00254E267C752A0011ECEA /* Assets.xcassets */,
 				BD002553267C752A0011ECEA /* LaunchScreen.storyboard */,
 				BD002556267C752A0011ECEA /* Info.plist */,
-				BD00254B267C75290011ECEA /* SwiftUIMemo.xcdatamodeld */,
 				BD002550267C752A0011ECEA /* Preview Content */,
 			);
 			path = SwiftUIMemo;
@@ -95,6 +99,16 @@
 				BD002551267C752A0011ECEA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BD0261F7268182C600C755D9 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				BD00254B267C75290011ECEA /* SwiftUIMemo.xcdatamodeld */,
+				BD0261F8268183A400C755D9 /* MemoEntity+Identifiable.swift */,
+				BD0261FA268183F100C755D9 /* CoreDataManager.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		BD354437267C7D740065E2D1 /* Model */ = {
@@ -224,6 +238,8 @@
 				BD354441267C86290065E2D1 /* MemoCell.swift in Sources */,
 				BD53D24B2680588A002D3BAB /* ComposeScene.swift in Sources */,
 				BDD1B23D268074F600C60991 /* TextView.swift in Sources */,
+				BD0261FB268183F100C755D9 /* CoreDataManager.swift in Sources */,
+				BD0261F9268183A400C755D9 /* MemoEntity+Identifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
