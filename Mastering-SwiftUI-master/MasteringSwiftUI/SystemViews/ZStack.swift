@@ -25,7 +25,28 @@ import SwiftUI
 
 struct View_ZStack: View {
    var body: some View {
-      Text("ZStack")
+    ZStack(alignment: .topLeading) {
+      Image(systemName: "suit.heart.fill")
+        .resizable()
+        .frame(width: 300, height: 300)
+        .foregroundColor(.red)
+      
+      Image(systemName: "suit.club.fill")
+        .resizable()
+        .frame(width: 300, height: 300)
+        .foregroundColor(.black)
+      
+      Image(systemName: "suit.spade.fill")
+        .resizable()
+        .frame(width: 300, height: 300)
+        .foregroundColor(.black)
+      
+      Image(systemName: "suit.diamond.fill")
+        .resizable()
+        .frame(width: 200, height: 200)
+        .foregroundColor(.red)
+        .offset(x: 100, y: 100) // 스택 정렬을 기준으로 좌표이동
+    }
    }
 }
 

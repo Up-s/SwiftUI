@@ -24,20 +24,20 @@
 import SwiftUI
 
 enum Figure: String, CaseIterable {
-   case rect = "Rectangle"
-   case circle = "Circle"
-   case triangle = "Triangle"
+  case rect = "Rectangle"
+  case circle = "Circle"
+  case triangle = "Triangle"
 }
 
 
 
 struct View_Picker: View {
-   
-   @State private var selected = 0//Figure.rect.rawValue
-   
-   var body: some View {
-      VStack {
-         Text("\(selected)")
+  
+  @State private var selected = 0//Figure.rect.rawValue
+  
+  var body: some View {
+    VStack {
+      Text("\(selected)")
 //         Group {
 //            if selected == Figure.rect.rawValue {
 //               Rectangle()
@@ -52,25 +52,25 @@ struct View_Picker: View {
 //            }
 //         }
 //         .frame(width: 300, height: 300)
-         
-         
-         Picker(selection: $selected, label: Text("Select")) {
+      
+      
+      Picker(selection: $selected, label: Text("Select")) {
 //            ForEach(Figure.allCases, id: \.rawValue) { item in
 //               Text("\(item.rawValue)")
 //            }
-            ForEach(0 ..< 100) {
-               Text("\($0)")
-            }
-         }
-         .labelsHidden()
-         .padding()
-         //.pickerStyle(SegmentedPickerStyle())
+        ForEach(0 ..< 100) {
+          Text("\($0)")
+        }
       }
-   }
+      .labelsHidden()
+      .padding()
+      //.pickerStyle(SegmentedPickerStyle())
+    }
+  }
 }
 
 struct View_Picker_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Picker()
-   }
+  static var previews: some View {
+    View_Picker()
+  }
 }

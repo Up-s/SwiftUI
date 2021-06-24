@@ -24,20 +24,34 @@
 import SwiftUI
 
 struct View_Stepper: View {
-   @State private var quantity = 0
-   
-   var body: some View {
-      VStack {
-         Text("\(quantity)")
-            .font(.system(size: 150))
-         
-         // #1
-      }
-   }
+  @State private var quantity = 0
+  
+  var body: some View {
+    VStack {
+      Text("\(quantity)")
+        .font(.system(size: 150))
+      
+      // #1
+      Stepper("Qty",
+              value: $quantity,
+              in: 0...100)
+        .padding()
+      
+      Stepper("Qty",
+              onIncrement: {
+                self.quantity += 2
+              },
+              onDecrement: {
+                self.quantity -= 1
+              })
+        .padding()
+        .labelsHidden()
+    }
+  }
 }
 
 struct View_Stepper_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Stepper()
-   }
+  static var previews: some View {
+    View_Stepper()
+  }
 }

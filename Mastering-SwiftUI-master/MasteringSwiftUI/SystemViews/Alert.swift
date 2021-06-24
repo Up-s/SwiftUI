@@ -24,29 +24,42 @@
 import SwiftUI
 
 struct View_Alert: View {
-   @State private var result = ""
-   
-   
-   var body: some View {
-      VStack {
-         Text(result)
-            .font(.largeTitle)
-         
-         Button(action: {
-            
-         }, label: {
-            Text("Show Alert")
-         })
-         .padding()
-         
-        
-         
-      }
-   }
+  @State private var result = ""
+  
+  @State private var showAlert = false
+  
+  var body: some View {
+    VStack {
+      Text(result)
+        .font(.largeTitle)
+      
+      Button(action: {
+        self.showAlert = true
+      }, label: {
+        Text("Show Alert")
+      })
+      .padding()
+      .alert(isPresented: $showAlert, content: {
+//        Alert(title: Text("Alert"), message: Text("Message"), dismissButton: .default(Text("Ok")))
+        Alert(title: Text("Alert"),
+              message: Text("Message"),
+              primaryButton: .destructive(Text("Delete"),
+                                          action: {
+                                            self.result = "Delete"
+                                          }),
+              secondaryButton: .cancel(Text("Cancel"),
+                                       action: {
+                                        self.result = "Cacenlled"
+                                       }))
+      })
+      
+      
+    }
+  }
 }
 
 struct Alert_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Alert()
-   }
+  static var previews: some View {
+    View_Alert()
+  }
 }

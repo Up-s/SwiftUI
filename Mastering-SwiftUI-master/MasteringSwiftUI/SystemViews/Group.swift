@@ -24,13 +24,30 @@
 import SwiftUI
 
 struct View_Group: View {
-   var body: some View {
-      Text("Hello, World!")
-   }
+  var body: some View {
+    VStack {
+      Text("Hello, World!1")
+      Text("Hello, World!2")
+      Text("Hello, World!3")
+      Text("Hello, World!4")
+      Text("Hello, World!5")
+      Text("Hello, World!6")
+      Text("Hello, World!7")
+      Text("Hello, World!8")
+      Text("Hello, World!9")
+      
+      Group {
+        Text("Hello, World!7")
+        Text("Hello, World!8")
+        Text("Hello, World!9")
+        Text("Hello, World!10")
+      }
+    }
+  }
 }
 
 struct View_Group_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Group()
-   }
+  static var previews: some View {
+    View_Group()
+  }
 }

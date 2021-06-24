@@ -24,30 +24,34 @@
 import SwiftUI
 
 struct SpringAnimation: View {
-   @State private var position = CGPoint.zero
-            
-      var body: some View {
-         VStack {
-            Circle()
-               .foregroundColor(.blue)
-               .frame(width: 50, height: 50)
-               .position(position)
-               .offset(x: 50, y: 50)               
-            
-            Spacer()
-            
-            Button(action: {
-               self.position = self.position == .zero ? CGPoint(x: 300, y: 500) : .zero
-            }, label: {
-               Text("Animate")
-            })
-            .padding()
-         }
-      }
+  @State private var position = CGPoint.zero
+  
+  var body: some View {
+    VStack {
+      Circle()
+        .foregroundColor(.blue)
+        .frame(width: 50, height: 50)
+        .position(position)
+        .offset(x: 50, y: 50)
+        .animation(.spring(response: 0.4, // 지속력
+                           dampingFraction: 0.3, // 낮을수록 폭이 큼
+                           blendDuration: 0))
+//        .animation(.interpolatingSpring(mass: <#T##Double#>, stiffness: <#T##Double#>, damping: <#T##Double#>, initialVelocity: <#T##Double#>))
+      
+      Spacer()
+      
+      Button(action: {
+        self.position = self.position == .zero ? CGPoint(x: 300, y: 500) : .zero
+      }, label: {
+        Text("Animate")
+      })
+      .padding()
+    }
+  }
 }
 
 struct SpringAnimation_Previews: PreviewProvider {
-   static var previews: some View {
-      SpringAnimation()
-   }
+  static var previews: some View {
+    SpringAnimation()
+  }
 }

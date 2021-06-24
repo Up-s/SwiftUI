@@ -24,41 +24,51 @@
 import SwiftUI
 
 struct View_Spacer: View {
-   var body: some View {
-      VStack(spacing: 0) { // #6
-         HStack {
-            Image(systemName: "suit.heart.fill")
-               .resizable()
-               .frame(width: 70, height: 70)
-               .foregroundColor(.white)
-            
-            // #3
-         }
-         .padding()
-         .background(Color.blue)
-         
-         // #1
-         
-         VStack {
-            // #5
-            
-            Image(systemName: "suit.spade.fill")
-               .resizable()
-               .frame(width: 70, height: 70)
-               .foregroundColor(.white)
-            
-            // #4
-         }
-         .padding()
-         .background(Color.red)
-         
-         // #2
+  var body: some View {
+    VStack(spacing: 0) { // #6
+      HStack {
+        Image(systemName: "suit.heart.fill")
+          .resizable()
+          .frame(width: 70, height: 70)
+          .foregroundColor(.white)
+        
+        // #3
+        Spacer()
       }
-   }
+      .padding()
+      .background(Color.blue)
+      
+      // #1
+//      Spacer() // 시스템 기본 높이
+      Spacer()
+        .frame(height: 50) // 50 고정
+//      Spacer(minLength: 50) // 최소 50
+      
+      VStack {
+        // #5
+//        Spacer()
+        
+        Image(systemName: "suit.spade.fill")
+          .resizable()
+          .frame(width: 70, height: 70)
+          .foregroundColor(.white)
+        
+        // #4
+//        Spacer()
+      }
+      .padding()
+      .background(Color.red)
+      
+      // #2
+      Spacer()
+        .frame(height: 20) // 20 고정
+      Spacer()
+    }
+  }
 }
 
 struct View_Spacer_Previews: PreviewProvider {
-   static var previews: some View {
-      View_Spacer()
-   }
+  static var previews: some View {
+    View_Spacer()
+  }
 }

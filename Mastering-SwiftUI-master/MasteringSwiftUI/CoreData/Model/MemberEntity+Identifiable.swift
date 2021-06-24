@@ -23,8 +23,8 @@
 
 import SwiftUI
 
-extension MemberEntity: Identifiable {
-   public var id: String {
-      return name ?? ""
-   }
-}
+//extension MemberEntity: Identifiable {
+//   public var id: String {
+//      return name ?? ""
+//   }
+//}

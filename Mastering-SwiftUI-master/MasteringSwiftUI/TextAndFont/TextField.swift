@@ -24,30 +24,47 @@
 import SwiftUI
 
 struct View_TextField: View {
+  
+  @State private var name: String = ""
+  @State private var password: String = ""
+  
+  var body: some View {
+    VStack {
+      Text("TextField")
+        .font(.largeTitle)
       
-   @State private var name: String = ""
-   @State private var password: String = ""
-   
-   var body: some View {
-      VStack {
-         Text("TextField")
-            .font(.largeTitle)
-         
-         Text("input: \(name)")
-            .font(.title)
-            .foregroundColor(.secondary)
-         
-         //
-         
-         
-         
-         Spacer()
-      }
-   }
+      Text("input: \(name)")
+        .font(.title)
+        .foregroundColor(.secondary)
+      
+      //
+      TextField("Input Something",
+                text: $name,
+                onEditingChanged: { changed in // 텍스트 필드에 포커싱 되었을때 true 벗어날때 false
+                  print(changed)
+                },
+                onCommit: { // 키보드 리턴키 입력 시 호출
+                  print("commit")
+                })
+        .padding()
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+        .font(.title)
+//        .keyboardType(.numberPad)
+//        .textContentType(.username)
+//        .autocapitalization(.none) // 첫 대문자 설정
+//        .disableAutocorrection(true) // 자동 수정 비활성화 true
+      
+      SecureField("Input Password", text: $password)
+        .padding()
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+      
+      Spacer()
+    }
+  }
 }
 
 struct View_TextField_Previews: PreviewProvider {
-   static var previews: some View {
-      View_TextField()
-   }
+  static var previews: some View {
+    View_TextField()
+  }
 }

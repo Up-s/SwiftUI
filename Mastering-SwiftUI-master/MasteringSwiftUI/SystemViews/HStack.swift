@@ -24,16 +24,36 @@
 import SwiftUI
 
 struct View_HStack: View {
-   var body: some View {
+  var body: some View {
+    // 수직 정렬
+    // 내부 뷰의 크기에 맞춰 크기가 정해짐
+    HStack(alignment: .top, spacing: 0) {
       Image(systemName: "suit.heart.fill")
+        .resizable()
+        .frame(width: 50, height: 50)
+        .foregroundColor(.red)
+      
+      Image(systemName: "suit.club.fill")
+         .resizable()
+         .frame(width: 150, height: 150)
+         .foregroundColor(.black)
+
+      Image(systemName: "suit.spade.fill")
+         .resizable()
+         .frame(width: 50, height: 50)
+         .foregroundColor(.black)
+
+      Image(systemName: "suit.diamond.fill")
          .resizable()
          .frame(width: 50, height: 50)
          .foregroundColor(.red)
-   }
+    }
+    .frame(maxWidth: .infinity, maxHeight: .infinity) // 최대값
+  }
 }
 
 struct View_HStack_Previews: PreviewProvider {
-   static var previews: some View {
-      View_HStack()
-   }
+  static var previews: some View {
+    View_HStack()
+  }
 }
